@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "elitechwiz-ai",
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 300
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js"
+    }
+  ],
+  "env": {
+    "AI_PROVIDER": "openai",
+    "AI_MODEL": "gpt-4o",
+    "USE_PAIRING_CODE": "true",
+    "LOG_LEVEL": "info"
+  }
+}

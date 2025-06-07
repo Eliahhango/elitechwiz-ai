@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  elitechwiz-ai:
+    build: .
+    container_name: elitechwiz-ai
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - AI_PROVIDER=${AI_PROVIDER:-openai}
+      - AI_MODEL=${AI_MODEL:-gpt-4o}
+      - USE_PAIRING_CODE=${USE_PAIRING_CODE:-true}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - PHONE_NUMBER=${PHONE_NUMBER}
+    volumes:
+      - ./baileys_auth_info:/app/baileys_auth_info
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Optional: Add a reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: elitechwiz-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - elitechwiz-ai
+    profiles:
+      - production

@@ -1,0 +1,49 @@
+services:
+  - type: web
+    name: elitechwiz-ai
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: node index.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: AI_PROVIDER
+        value: openai
+        sync: false
+      - key: AI_MODEL
+        value: gpt-4o
+        sync: false
+      - key: USE_PAIRING_CODE
+        value: true
+        sync: false
+      - key: LOG_LEVEL
+        value: info
+        sync: false
+      - key: PORT
+        value: 3000
+        sync: false
+      - key: SESSION_DIR
+        value: ./baileys_auth_info
+        sync: false
+      - key: ENABLE_WEBHOOK
+        value: false
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        sync: false
+      - key: PHONE_NUMBER
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
+    disk:
+      name: elitechwiz-data
+      mountPath: /app/baileys_auth_info
+      sizeGB: 1

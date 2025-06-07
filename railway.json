@@ -1,0 +1,53 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "npm install"
+  },
+  "deploy": {
+    "startCommand": "node index.js",
+    "healthcheckPath": "/health",
+    "healthcheckTimeout": 300,
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  },
+  "environments": {
+    "production": {
+      "variables": [
+        {
+          "name": "NODE_ENV",
+          "value": "production"
+        },
+        {
+          "name": "AI_PROVIDER",
+          "value": "openai"
+        },
+        {
+          "name": "AI_MODEL",
+          "value": "gpt-4o"
+        },
+        {
+          "name": "USE_PAIRING_CODE",
+          "value": "true"
+        },
+        {
+          "name": "LOG_LEVEL",
+          "value": "info"
+        },
+        {
+          "name": "PORT",
+          "value": "3000"
+        },
+        {
+          "name": "SESSION_DIR",
+          "value": "./baileys_auth_info"
+        },
+        {
+          "name": "ENABLE_WEBHOOK",
+          "value": "false"
+        }
+      ],
+      "secrets": ["OPENAI_API_KEY", "ANTHROPIC_API_KEY", "PHONE_NUMBER", "WEBHOOK_URL", "WEBHOOK_SECRET"]
+    }
+  }
+}

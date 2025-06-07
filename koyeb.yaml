@@ -1,0 +1,48 @@
+name: elitechwiz-ai
+service:
+  name: elitechwiz-ai
+  ports:
+    - port: 3000
+      protocol: http
+  routes:
+    - path: /
+      port: 3000
+  health_checks:
+    - port: 3000
+      http:
+        path: /health
+  env:
+    - name: NODE_ENV
+      value: production
+    - name: AI_PROVIDER
+      value: openai
+    - name: AI_MODEL
+      value: gpt-4o
+    - name: USE_PAIRING_CODE
+      value: "true"
+    - name: LOG_LEVEL
+      value: info
+    - name: PORT
+      value: "3000"
+    - name: SESSION_DIR
+      value: ./baileys_auth_info
+    - name: ENABLE_WEBHOOK
+      value: "false"
+    # Secrets to be set in Koyeb dashboard:
+    # - name: OPENAI_API_KEY
+    # - name: ANTHROPIC_API_KEY
+    # - name: ANTHROPIC_MODEL
+    # - name: PHONE_NUMBER
+    # - name: WEBHOOK_URL
+    # - name: WEBHOOK_SECRET
+  regions:
+    - fra
+  instance_type: nano
+  scaling:
+    min: 1
+    max: 1
+  volumes:
+    - name: baileys-auth
+      mount_path: /app/baileys_auth_info
+      type: persistent
+      size_gb: 1

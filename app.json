@@ -1,0 +1,92 @@
+{
+  "name": "EliTechWiz AI",
+  "description": "A powerful WhatsApp AI chatbot using Baileys and OpenAI/Anthropic",
+  "repository": "https://github.com/yourusername/elitechwiz-ai",
+  "logo": "https://raw.githubusercontent.com/yourusername/elitechwiz-ai/main/assets/logo.png",
+  "keywords": ["whatsapp", "ai", "chatbot", "baileys", "openai", "anthropic"],
+  "stack": "heroku-22",
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment mode",
+      "value": "production",
+      "required": true
+    },
+    "AI_PROVIDER": {
+      "description": "AI provider to use (openai or anthropic)",
+      "value": "openai",
+      "required": true
+    },
+    "AI_MODEL": {
+      "description": "AI model to use (e.g., gpt-4o, gpt-3.5-turbo, claude-3-sonnet-20240229)",
+      "value": "gpt-4o",
+      "required": true
+    },
+    "OPENAI_API_KEY": {
+      "description": "Your OpenAI API key (get it from https://platform.openai.com/api-keys)",
+      "required": false
+    },
+    "ANTHROPIC_API_KEY": {
+      "description": "Your Anthropic API key (get it from https://console.anthropic.com/)",
+      "required": false
+    },
+    "ANTHROPIC_MODEL": {
+      "description": "Anthropic model to use (if AI_PROVIDER is set to anthropic)",
+      "value": "claude-3-sonnet-20240229",
+      "required": false
+    },
+    "USE_PAIRING_CODE": {
+      "description": "Use pairing code instead of QR code (true/false)",
+      "value": "true",
+      "required": true
+    },
+    "PHONE_NUMBER": {
+      "description": "Your phone number with country code (e.g., +1234567890) - optional if using pairing code",
+      "required": false
+    },
+    "SESSION_DIR": {
+      "description": "Directory to store WhatsApp session data",
+      "value": "./baileys_auth_info",
+      "required": false
+    },
+    "LOG_LEVEL": {
+      "description": "Logging level (error, warn, info, debug)",
+      "value": "info",
+      "required": false
+    },
+    "PORT": {
+      "description": "Port for the HTTP server",
+      "value": "3000",
+      "required": false
+    },
+    "ENABLE_WEBHOOK": {
+      "description": "Enable webhook for external integrations (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "WEBHOOK_URL": {
+      "description": "URL to send webhook events (if ENABLE_WEBHOOK is true)",
+      "required": false
+    },
+    "WEBHOOK_SECRET": {
+      "description": "Secret key for webhook authentication",
+      "required": false,
+      "generator": "secret"
+    }
+  },
+  "addons": [],
+  "scripts": {
+    "postdeploy": "echo 'EliTechWiz AI deployed successfully! Check the logs to get your pairing code.'"
+  }
+}

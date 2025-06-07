@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "name": "elitechwiz-ai",
+  "rewrites": [
+    {
+      "source": "/setup",
+      "destination": "/public/setup.html"
+    },
+    {
+      "source": "/config",
+      "destination": "/public/config.html"
+    },
+    {
+      "source": "/connect",
+      "destination": "/public/connect.html"
+    },
+    {
+      "source": "/verify",
+      "destination": "/api/verify-fork"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/health"
+    },
+    {
+      "source": "/auto-setup",
+      "destination": "/api/auto-setup"
+    }
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 30,
+      "memory": 1024
+    }
+  }
+}

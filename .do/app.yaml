@@ -1,0 +1,66 @@
+name: elitechwiz-ai
+services:
+- name: web
+  source_dir: /
+  github:
+    repo: yourusername/elitechwiz-ai
+    branch: main
+  run_command: node index.js
+  environment_slug: node-js
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  health_check:
+    http_path: /health
+  envs:
+  - key: NODE_ENV
+    value: production
+  - key: AI_PROVIDER
+    value: openai
+    scope: RUN_TIME
+    type: GENERAL
+  - key: AI_MODEL
+    value: gpt-4o
+    scope: RUN_TIME
+    type: GENERAL
+  - key: USE_PAIRING_CODE
+    value: "true"
+    scope: RUN_TIME
+    type: GENERAL
+  - key: LOG_LEVEL
+    value: info
+    scope: RUN_TIME
+    type: GENERAL
+  - key: PORT
+    value: "3000"
+    scope: RUN_TIME
+    type: GENERAL
+  - key: SESSION_DIR
+    value: ./baileys_auth_info
+    scope: RUN_TIME
+    type: GENERAL
+  - key: ENABLE_WEBHOOK
+    value: "false"
+    scope: RUN_TIME
+    type: GENERAL
+  - key: OPENAI_API_KEY
+    scope: RUN_TIME
+    type: SECRET
+  - key: ANTHROPIC_API_KEY
+    scope: RUN_TIME
+    type: SECRET
+  - key: ANTHROPIC_MODEL
+    scope: RUN_TIME
+    type: SECRET
+  - key: PHONE_NUMBER
+    scope: RUN_TIME
+    type: SECRET
+  - key: WEBHOOK_URL
+    scope: RUN_TIME
+    type: SECRET
+  - key: WEBHOOK_SECRET
+    scope: RUN_TIME
+    type: SECRET
+  volumes:
+  - name: baileys-auth
+    mount_path: /app/baileys_auth_info
+    size_gb: 1
