@@ -305,7 +305,7 @@ If you encounter issues:
 
 ## 10. Finally, let's update the main index.js to fix the import issue and ensure everything works:
 
-```typescriptreact file="index.js"
+\`\`\`typescriptreact file="index.js"
 [v0-no-op-code-block-prefix]import {
   default as makeWASocket,
   DisconnectReason,

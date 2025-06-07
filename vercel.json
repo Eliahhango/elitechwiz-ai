@@ -1,38 +1,7 @@
 {
   "version": 2,
   "name": "elitechwiz-ai",
-  "description": "Ultimate WhatsApp AI Chatbot by Eliahhango",
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 300,
-      "memory": 1024
-    },
-    "api/health.js": {
-      "maxDuration": 10,
-      "memory": 128
-    },
-    "api/verify-fork.js": {
-      "maxDuration": 30,
-      "memory": 256
-    },
-    "api/auto-setup.js": {
-      "maxDuration": 60,
-      "memory": 512
-    },
-    "api/config.js": {
-      "maxDuration": 30,
-      "memory": 256
-    },
-    "api/whatsapp.js": {
-      "maxDuration": 300,
-      "memory": 1024
-    }
-  },
   "rewrites": [
-    {
-      "source": "/",
-      "destination": "/public/index.html"
-    },
     {
       "source": "/setup",
       "destination": "/public/setup.html"
@@ -46,8 +15,24 @@
       "destination": "/public/connect.html"
     },
     {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
+      "source": "/verify",
+      "destination": "/api/verify-fork"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/health"
+    },
+    {
+      "source": "/auto-setup",
+      "destination": "/api/auto-setup"
+    },
+    {
+      "source": "/",
+      "destination": "/public/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/public/$1"
     }
   ],
   "headers": [
@@ -64,7 +49,7 @@
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization, X-Requested-With"
+          "value": "Content-Type, Authorization"
         },
         {
           "key": "Cache-Control",
@@ -82,17 +67,13 @@
       ]
     }
   ],
-  "env": {
-    "NODE_ENV": "production",
-    "VERCEL_GIT_REPO_OWNER": "Eliahhango",
-    "VERCEL_GIT_REPO_SLUG": "elitechwiz-ai",
-    "GIT_OWNER": "Eliahhango",
-    "GIT_REPO": "elitechwiz-ai",
-    "REPOSITORY_URL": "https://github.com/Eliahhango/elitechwiz-ai"
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 30,
+      "memory": 1024
+    }
   },
-  "github": {
-    "enabled": true,
-    "autoAlias": true,
-    "autoJobCancelation": true
+  "env": {
+    "NODE_ENV": "production"
   }
 }
