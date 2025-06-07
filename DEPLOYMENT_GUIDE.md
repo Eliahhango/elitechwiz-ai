@@ -4,7 +4,7 @@
 
 1. **Fork the Repository**
    \`\`\`bash
-   # Go to: https://github.com/elitechwiz/whatsapp-ai-bot
+   # Go to: https://github.com/Eliahhango/elitechwiz-ai
    # Click "Fork" button
    \`\`\`
 

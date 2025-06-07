@@ -78,7 +78,7 @@ Deploy EliTechWiz AI instantly to your favorite platform with pre-configured env
 <table>
 <tr>
 <td align="center" width="25%">
-<a href="https://heroku.com/deploy?template=https://github.com/yourusername/elitechwiz-ai&env[AI_PROVIDER]=openai&env[AI_MODEL]=gpt-4o&env[USE_PAIRING_CODE]=true">
+<a href="https://heroku.com/deploy?template=https://github.com/Eliahhango/elitechwiz-ai&env[AI_PROVIDER]=openai&env[AI_MODEL]=gpt-4o&env[USE_PAIRING_CODE]=true">
 <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku" height="32">
 </a>
 <br><strong>Heroku</strong><br>
@@ -92,14 +92,14 @@ Deploy EliTechWiz AI instantly to your favorite platform with pre-configured env
 <em>$5/month</em>
 </td>
 <td align="center" width="25%">
-<a href="https://render.com/deploy?repo=https://github.com/yourusername/elitechwiz-ai&name=elitechwiz-ai&env[AI_PROVIDER]=openai&env[AI_MODEL]=gpt-4o&env[USE_PAIRING_CODE]=true">
+<a href="https://render.com/deploy?repo=https://github.com/Eliahhango/elitechwiz-ai&name=elitechwiz-ai&env[AI_PROVIDER]=openai&env[AI_MODEL]=gpt-4o&env[USE_PAIRING_CODE]=true">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="32">
 </a>
 <br><strong>Render</strong><br>
 <em>Free tier available</em>
 </td>
 <td align="center" width="25%">
-<a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/yourusername/elitechwiz-ai/tree/main&refcode=elitechwiz">
+<a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/Eliahhango/elitechwiz-ai/tree/main&refcode=elitechwiz">
 <img src="https://www.deploytodo.com/do-btn-blue.svg" alt="Deploy to DigitalOcean" height="32">
 </a>
 <br><strong>DigitalOcean</strong><br>
@@ -113,31 +113,31 @@ Deploy EliTechWiz AI instantly to your favorite platform with pre-configured env
 <table>
 <tr>
 <td align="center" width="20%">
-<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/yourusername/elitechwiz-ai&branch=main&name=elitechwiz-ai&env[AI_PROVIDER]=openai&env[AI_MODEL]=gpt-4o&env[USE_PAIRING_CODE]=true">
+<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/Eliahhango/elitechwiz-ai&branch=main&name=elitechwiz-ai&env[AI_PROVIDER]=openai&env[AI_MODEL]=gpt-4o&env[USE_PAIRING_CODE]=true">
 <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy to Koyeb" height="32">
 </a>
 <br><strong>Koyeb</strong>
 </td>
 <td align="center" width="20%">
-<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Felitechwiz-ai&env=OPENAI_API_KEY,AI_PROVIDER,AI_MODEL,USE_PAIRING_CODE&envDescription=API%20keys%20needed%20for%20the%20application&envLink=https%3A%2F%2Fgithub.com%2Fyourusername%2Felitechwiz-ai%23environment-variables&project-name=elitechwiz-ai&repository-name=elitechwiz-ai">
+<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FEliahhango%2Felitechwiz-ai&env=OPENAI_API_KEY,AI_PROVIDER,AI_MODEL,USE_PAIRING_CODE&envDescription=API%20keys%20needed%20for%20the%20application&envLink=https%3A%2F%2Fgithub.com%2FEliahhango%2Felitechwiz-ai%23environment-variables&project-name=elitechwiz-ai&repository-name=elitechwiz-ai">
 <img src="https://vercel.com/button" alt="Deploy with Vercel" height="32">
 </a>
 <br><strong>Vercel</strong>
 </td>
 <td align="center" width="20%">
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/elitechwiz-ai&env[AI_PROVIDER]=openai&env[AI_MODEL]=gpt-4o&env[USE_PAIRING_CODE]=true">
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/Eliahhango/elitechwiz-ai&env[AI_PROVIDER]=openai&env[AI_MODEL]=gpt-4o&env[USE_PAIRING_CODE]=true">
 <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" height="32">
 </a>
 <br><strong>Netlify</strong>
 </td>
 <td align="center" width="20%">
-<a href="https://deploy.cloud.run?git_repo=https://github.com/yourusername/elitechwiz-ai">
+<a href="https://deploy.cloud.run?git_repo=https://github.com/Eliahhango/elitechwiz-ai">
 <img src="https://deploy.cloud.run/button.svg" alt="Run on Google Cloud" height="32">
 </a>
 <br><strong>Google Cloud</strong>
 </td>
 <td align="center" width="20%">
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fyourusername%2Felitechwiz-ai%2Fmain%2Fazuredeploy.json">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FEliahhango%2Felitechwiz-ai%2Fmain%2Fazuredeploy.json">
 <img src="https://aka.ms/deploytoazurebutton" alt="Deploy to Azure" height="32">
 </a>
 <br><strong>Azure</strong>
@@ -166,7 +166,7 @@ Deploy EliTechWiz AI instantly to your favorite platform with pre-configured env
 
 \`\`\`bash
 # 1️⃣ Clone the repository
-git clone https://github.com/yourusername/elitechwiz-ai.git
+git clone https://github.com/Eliahhango/elitechwiz-ai.git
 cd elitechwiz-ai
 
 # 2️⃣ Install dependencies
@@ -189,7 +189,7 @@ npm start
 
 \`\`\`bash
 # 1️⃣ Clone and navigate
-git clone https://github.com/yourusername/elitechwiz-ai.git
+git clone https://github.com/Eliahhango/elitechwiz-ai.git
 cd elitechwiz-ai
 
 # 2️⃣ Create environment file
@@ -601,9 +601,9 @@ vercel
 
 We welcome contributions! Here's how you can help:
 
-[![Contributors](https://img.shields.io/github/contributors/yourusername/elitechwiz-ai)](https://github.com/yourusername/elitechwiz-ai/graphs/contributors)
-[![Issues](https://img.shields.io/github/issues/yourusername/elitechwiz-ai)](https://github.com/yourusername/elitechwiz-ai/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/yourusername/elitechwiz-ai)](https://github.com/yourusername/elitechwiz-ai/pulls)
+[![Contributors](https://img.shields.io/github/contributors/Eliahhango/elitechwiz-ai)](https://github.com/Eliahhango/elitechwiz-ai/graphs/contributors)
+[![Issues](https://img.shields.io/github/issues/Eliahhango/elitechwiz-ai)](https://github.com/Eliahhango/elitechwiz-ai/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/Eliahhango/elitechwiz-ai)](https://github.com/Eliahhango/elitechwiz-ai/pulls)
 
 </div>
 
@@ -611,7 +611,7 @@ We welcome contributions! Here's how you can help:
 
 \`\`\`bash
 # Fork the repository
-git clone https://github.com/yourusername/elitechwiz-ai.git
+git clone https://github.com/Eliahhango/elitechwiz-ai.git
 cd elitechwiz-ai
 
 # Create feature branch
@@ -635,13 +635,13 @@ git push origin feature/amazing-feature
 <table>
 <tr>
 <td align="center" width="25%">
-<a href="https://github.com/yourusername/elitechwiz-ai/issues">
+<a href="https://github.com/Eliahhango/elitechwiz-ai/issues">
 <img src="https://img.shields.io/badge/GitHub-Issues-red?style=for-the-badge&logo=github" alt="GitHub Issues">
 </a>
 <br><strong>Bug Reports</strong>
 </td>
 <td align="center" width="25%">
-<a href="https://github.com/yourusername/elitechwiz-ai/discussions">
+<a href="https://github.com/Eliahhango/elitechwiz-ai/discussions">
 <img src="https://img.shields.io/badge/GitHub-Discussions-blue?style=for-the-badge&logo=github" alt="GitHub Discussions">
 </a>
 <br><strong>Questions</strong>
@@ -693,7 +693,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### 🌟 **Star History**
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/elitechwiz-ai&type=Date)](https://star-history.com/#yourusername/elitechwiz-ai&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Eliahhango/elitechwiz-ai&type=Date)](https://star-history.com/#Eliahhango/elitechwiz-ai&Date)
 
 ---
 

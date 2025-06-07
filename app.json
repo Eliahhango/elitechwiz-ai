@@ -1,8 +1,8 @@
 {
   "name": "EliTechWiz AI",
   "description": "A powerful WhatsApp AI chatbot using Baileys and OpenAI/Anthropic",
-  "repository": "https://github.com/yourusername/elitechwiz-ai",
-  "logo": "https://raw.githubusercontent.com/yourusername/elitechwiz-ai/main/assets/logo.png",
+  "repository": "https://github.com/Eliahhango/elitechwiz-ai",
+  "logo": "https://raw.githubusercontent.com/Eliahhango/elitechwiz-ai/main/assets/logo.png",
   "keywords": ["whatsapp", "ai", "chatbot", "baileys", "openai", "anthropic"],
   "stack": "heroku-22",
   "success_url": "/",
